@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<!--
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="es" ng-app="mainModule">
+	<head>
+		<title>Buscador</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+		<script src="assets/angular/request.js"></script>
+	</head>
+	<body ng-controller="controller">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>Buscador</h1>
+				<p>Esta web busca una palabra en el código HTML del sitio web.</p>
+			</header>
+
+		<!-- Form -->
+			<form id="signup-form" method="post" action="#">
+				<input type="text" name="email" id="email" placeholder="URL" ng-model="url"/>
+				<input type="text" name="email" id="email" placeholder="Palabra" ng-model="word"/>
+				<input ng-click="search()" type="submit" value="Analizar" />
+			</form>
+
+		<!-- Answer -->
+			<br>
+			<div ng-show="active">
+				<p ng-show="answer" class="green icon fa-check fa-2x"> Palabra encontrada en la página.</p>
+				<p ng-hide="answer" class="red icon fa-times fa-2x"> Palabra no encontrada en la página.</p>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				
+				<ul class="copyright">
+					<li>&copy; Inteligencia Computacional.</li><li>Larry Portocarrero</li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
